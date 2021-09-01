@@ -13,7 +13,7 @@ import { encounterPokemon } from './utils.js';
 
 
 export function renderPoke(pokeId) {
-    const pokeDiv = document.createElement('div');
+    const pokeLabel = document.createElement('label');
     const image = document.createElement('img');
     const input = document.createElement('input');
     const pokeName = document.createElement('p');
@@ -26,8 +26,8 @@ export function renderPoke(pokeId) {
     image.src = pokeObj['url_image'];
     pokeName.textContent = pokeObj.pokemon;
 
-    pokeDiv.append(image, input, pokeName);
+    pokeLabel.append(input, image, pokeName);
 
 
-    return pokeDiv;
+    return pokeLabel;
 }
