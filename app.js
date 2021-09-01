@@ -25,10 +25,18 @@ catchButton.addEventListener('click', () => {
 
     const caughtPoke = document.querySelector('input:checked');
     const pokeId = Number(caughtPoke.value); 
-    
+
     catchPokemon(pokeId);
+    
     if (timesPlayed > 10) {
         window.location = './results';
     }
+    const pokeContainer = document.getElementById('poke-container');
+    const childDivs = pokeContainer.children;
+    childDivs[0].remove();
+    childDivs[0].remove();
+    childDivs[0].remove();
+    
+    render3Pokes();
 });
 

@@ -14,15 +14,22 @@ const labels = idsArr.map((id) => {
     return name;
 });
 
-const ctx = document.getElementById('myChart');
+const dataEncounters = pokedex.map((obj) => {
+    return obj.encounters;
+});
 
+const dataCaught = pokedex.map((obj) => {
+    return obj.caught;
+});
+
+const ctx = document.getElementById('myChart');
 const myChart = new Chart(ctx, { // eslint-disable-line
     type: 'bar',
     data: {
         labels: labels,
         datasets: [{
             label: 'Number of Encounters',
-            data: [3, 10, 3, 5, 2, 3],
+            data: dataEncounters,
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
