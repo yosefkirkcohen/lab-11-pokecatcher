@@ -17,7 +17,7 @@ import { render3Pokes } from './utils.js';
 const catchButton = document.getElementById('catch');
 
 render3Pokes();
-let timesPlayed = 1;
+let timesPlayed = 0;
 
 
 catchButton.addEventListener('click', () => {
